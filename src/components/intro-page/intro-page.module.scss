@@ -1,0 +1,143 @@
+@keyframes fade-in-slide-down {
+  0% {
+    transform: translateY(-250px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-slide-up {
+  0% {
+    transform: translateY(250px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.intro {
+  &_wrapper {
+    background: var(--black);
+    color: var(--gold);
+    min-height: 800px;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 1000px) {
+      min-height: 100vh;
+      height: initial;
+    }
+
+    &.animate {
+      .intro_text_wrapper,
+      .intro_button,
+      .intro_description {
+        animation: fade-in-slide-up 1s ease-in-out;
+      }
+
+      .intro_logo {
+        animation: fade-in-slide-down 1s ease-in-out;
+      } 
+    }
+  }
+
+  &_logo {
+    margin-bottom: 40px;
+    @media (max-width: 1000px) {
+      width: 50px;
+      height: 72px;
+      margin-bottom: 3px;
+    }
+  }
+
+  &_title {
+    font-weight: 900;
+    font-size: 70px;
+    font-family: var(--title-font);
+    margin: 0;
+
+    @media (max-width: 1000px) {
+      text-align: center;
+      margin: 20px 0 0 0;
+      font-size: 36px;
+    }
+
+    &_wrapper {
+      position: relative;
+    }
+  }
+
+  &_description {
+    max-width: 630px;
+    padding: 0 20px;
+    font-size: 22px;
+    text-align: center;
+    @media (max-width: 1000px) {
+      font-size: 18px;
+    }
+  }
+
+  &_text {
+    font-size: 22px;
+
+    &_title {
+      @media (max-width: 1000px) {
+        font-weight: bold;
+        font-size: 18px;
+      }
+    }
+
+    @media (max-width: 1000px) {
+      font-weight: 300;
+      font-size: 18px;
+    }
+
+    &_wrapper {
+      margin-top: 70px;
+      text-align: center;
+      @media (max-width: 1000px) {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &_button {
+    margin-top: 30px;
+    width: 420px;
+    font-size: 22px;
+    padding: 22px 0;
+    border-radius: 5px;
+
+    @media (max-width: 1000px) {
+      margin-top: 20px;
+      padding: 21px;
+      font-size: 18px;
+    }
+  }
+
+  &_body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 100px;
+
+    @media (max-width: 1000px) {
+      padding-bottom: 70px;
+    }
+  }
+}

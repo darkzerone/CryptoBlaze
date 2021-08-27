@@ -1,0 +1,42 @@
+// custom animations start
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+// custom animations end
+
+.w_100 {
+  width: 100%;
+}
+
+.box_shadow {
+  box-shadow: 0px 4px 14px 0px var(--black);
+  background: var(--black);
+}
+
+.project {
+  &_wrapper {
+    background: var(--black);
+    color: var(--gold);
+    padding-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    max-width: 1140px;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  &_first_item {
+    margin-top: 100px;
+
+    @media (max-width: 1000px) {
+      text-align: center;
+      margin-top: 0;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+button {
+  cursor: pointer;
+  color: var(--black);
+  background-color: var(--white);
+  border: 0;
+  padding: 10px;
+  border-radius: 3px;
+  box-shadow: 0 4px 2px 0 rgba(0, 0, 0, .5);
+  font-weight: bold;
+  font-size: 18px;
+  padding: 15px 30px;
+  transition: all .1s ease-in-out;
+  
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    transform: scale(1.03);
+  }
+
+  &:active {
+    transform: scale(.98);
+  }
+}
