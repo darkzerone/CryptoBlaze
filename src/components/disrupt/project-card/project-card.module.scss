@@ -1,0 +1,114 @@
+// custom animations start
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+// custom animations end
+
+.project_card {
+  &_wrapper {
+    margin-top: 80px;
+    max-height: 850px;
+    width: 80vw;
+    max-width: 100%;
+    align-items: center;
+    @media (max-width: 768px) {
+      width: 100%;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  }
+
+  &_left {
+    justify-content: center;
+    max-width: 500px;
+    display: flex;
+  }
+
+  &_right {
+    justify-content: center;
+    max-width: 500px;
+    display: flex;
+  }
+
+  &_image {
+    align-items: center;
+    max-width: 490px;
+
+    @media (max-width: 1000px) {
+      display: block;
+      margin: auto;
+      margin: 0 -2px 20px;
+      width: calc(100% + 6px);
+    }
+  }
+
+  &_title {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+
+  &_name {
+    font-size: 36px;
+    line-height: 1;
+    font-weight: bold;
+    @media (max-width: 768px) {
+      font-size: 30px;
+    }
+  }
+
+  &_property_row {
+    align-items: center;
+  }
+
+  &_time,
+  &_skills {
+    margin: 5px;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+
+    &_image {
+      margin-left: 13px;
+      height: 24px;
+      width: 24px;
+    }
+  }
+
+  &_description {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+
+  &_quote {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.33;
+    margin-bottom: 15px;
+
+    &_owner {
+      font-size: 18px;
+      line-height: 1.33;
+      font-weight: bold;
+    }
+  }
+
+  &_desktop {
+    @media (max-width: 768px) {
+      display: none !important;
+    }
+  }
+
+  &_mobile {
+    display: none !important;
+    @media (max-width: 768px) {
+      display: block !important;
+    }
+  }
+}

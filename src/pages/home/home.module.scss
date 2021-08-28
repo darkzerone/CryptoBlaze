@@ -1,0 +1,58 @@
+@keyframes video-fade {
+  0% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  85% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.home {
+  &_video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    display: flex;
+    background: var(--black);
+    
+    &.hidden {
+      z-index: -1;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    video {
+      position: absolute;
+      left: calc(50% - .2px);
+      top: 75%;
+      opacity: 1;
+      width: 1864px;
+      transform: translate(-50%, -50%);
+      
+      &.active {
+        animation: video-fade 4s linear;
+      }
+      
+      @media (max-width: 1000px) {
+        width: 960px;
+        top: 82%;
+      }
+    }
+  }
+}

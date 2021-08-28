@@ -1,0 +1,127 @@
+// custom animations start
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+// custom animations end
+
+.disrupt {
+  &_wrapper {
+    position: relative;
+    overflow: hidden;
+    font-family: Assistant;
+    background: var(--gold);
+    color: var(--grey);
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    padding: 50px 0;
+    width: 100%;
+  }
+
+  &_background_image {
+    height: 120px;
+
+    &_one {
+      position: absolute;
+      top: 2vh;
+
+      @media (max-width: 1000px) {
+        top: 360px;
+        left: 20px;
+        opacity: .2;
+      }
+    }
+
+    &_two {
+      position: absolute;
+      top: -5vh;
+      right: 1vw;
+    }
+
+    &_three {
+      position: absolute;
+      top: 45vh;
+      right: 5vw;
+
+      @media (max-width: 1000px) {
+        display: none;
+      }
+    }
+
+    &_four {
+      position: absolute;
+      top: 70vh;
+      left: 15vw;
+      opacity: 0.2;
+      
+      @media (max-width: 1000px) {
+        top: 860px;
+      }
+    }
+
+    &_five {
+      position: absolute;
+      top: 90vh;
+      left: 3vw;
+
+      @media (max-width: 1000px) {
+        display: none;
+      }
+    }
+
+    &_six {
+      position: absolute;
+      bottom: -5vh;
+      right: 3vw;
+    }
+
+    &_seven {
+      position: absolute;
+      top: 80vh;
+      right: 15vw;
+      opacity: 0.2;
+    }
+  }
+
+  &_title {
+    &_body {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    &_description {
+      max-width: 450px;
+    }
+
+    &_large {
+      margin: 0px 10px 0px 10px;
+      font-size: 50px;
+    }
+
+    &_contact {
+      margin-top: 15px;
+      width: 300px;
+    }
+  }
+
+  &_body { 
+    margin-bottom: 10vh;
+  }
+}
+
+.opacity_gradient {
+  background: radial-gradient(
+    rgba(255, 255, 255, .9), 
+    transparent, 
+    ); 
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}

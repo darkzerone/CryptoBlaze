@@ -1,0 +1,99 @@
+// custom animations start
+@keyframes fade-in {
+  0% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
+}
+// custom animations end
+
+.project {
+  &_button {
+    @media (max-width: 1000px) {
+      width: 100%;
+    }
+  }
+
+
+  &_card {
+    max-height: 850px;
+    width: 100%;
+    padding-bottom: 50px;
+    align-items: center;
+    @media (max-width: 1000px) {
+      max-height: initial;
+      width: initial;
+      padding-bottom: 20px;
+    }
+  }
+
+  &_image {
+    padding: 20px 20px 20px 20px;
+    max-width: 550px;
+    @media (max-width: 1000px) {
+        display: block;
+        margin: auto;
+        max-height: 50vh;
+        max-width: 75vw;
+        padding: 0px;
+    }
+  }
+
+  &_title {
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 300;
+    margin-top: 35px;
+    margin-bottom: 2px;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &_name {
+    font-size: 36px;
+    line-height: 1;
+    font-weight: bold;
+
+    &.lg {
+        font-size: 50px;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 30px;
+    }
+  }
+
+  &_description {
+    white-space: pre-line;
+    font-size: 15px;
+    line-height: 1.5;
+    max-width: 40vw;
+    margin-top: 10px;
+
+    p {
+      margin: 0;
+    }
+
+    @media (max-width: 1350px) {
+        max-width: initial;
+    }
+  }
+
+  &_desktop {
+    @media (max-width: 1350px) {
+        display: none !important;
+    }
+  }
+
+  &_mobile {
+    display: none !important;
+    @media (max-width: 1350px) {
+        display: flex !important;
+    }
+  }
+}
