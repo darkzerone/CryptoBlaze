@@ -1,7 +1,10 @@
 {
   "name": "cryptoplaze",
   "version": "0.1.0",
-  "private": true,
+  "author": {
+    "name": "CryptoPlazeDev"
+  },
+  "private": false,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
     "aos": "^2.3.4",
