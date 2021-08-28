@@ -4,7 +4,7 @@
   "author": {
     "name": "CryptoPlazeDev"
   },
-  "private": false,
+  "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
     "aos": "^2.3.4",
