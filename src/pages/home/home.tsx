@@ -4,7 +4,7 @@ import { ContactPage } from "../../components/contact/contact-page";
 import { Carousel } from "../../components/carousel/carousel";
 import { DisruptPage } from "../../components/disrupt/disrupt-page";
 import { ProjectPage } from "../../components/projects/project-page";
-import { WhyUsPage } from "../../components/how-we-work/why-us-page";
+import { WhyUsPage } from "../../components/why-us/why-us-page";
 
 export const Home = () => {
   
