@@ -10,7 +10,7 @@
 }
 // custom animations end
 
-.how_we_work {
+.why_us {
   &_wrapper {
     background: var(--black);
     color: var(--gold);
@@ -26,7 +26,9 @@
   }
 
   &_icon {
-    height: 35px;
+    font-size: 35px;
+    color: white;
+
 
     &_column {
       font-size: 14px;
@@ -108,7 +110,11 @@
     }
 
     &_wrapper {
-      padding: 50px;
+      justify-content: center;
+      display: flex;
+      overflow: hidden;
+      border-radius: 260px;
+
       @media (max-width: 768px) {
         padding: 0px;
       }

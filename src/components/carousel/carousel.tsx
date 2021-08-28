@@ -1,5 +1,5 @@
-import React, { ReactElement, useState, DragEvent } from "react";
-import classes from "./portfolio-quotes.module.scss";
+import React, { ReactElement, useState } from "react";
+import classes from "./carousel.module.scss";
 
 enum Entries {
   first,
@@ -7,13 +7,13 @@ enum Entries {
   third
 };
 
-const quotes = {
-  [Entries.third]: "Ipsum Lor dolor sit amet, consectetur adipsiscing elit sed do eiusomod tempor incididunt ut labore et doloro.",
-  [Entries.second]: "Ipsum lorum, te ma re ipsum, duis aute irurue dolor in reprehenderit in voluptaevelit esse cillu, dolore.",
-  [Entries.first]: "Lorum Ipsum, excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+const carouselOptions = {
+  [Entries.third]: "Once you’ve set up your wallet of choice, connect it to CryptoPlaze! Learn more about what wallets we support.",
+  [Entries.second]: "Upload your work (image, video, audio, or 3D art), add a title and description, and customize your NFTs with properties, stats, and unlockable content",
+  [Entries.first]: "Choose between auctions, fixed-price listings, and declining-price listings. You choose how you want to sell your NFTs, and we help you sell them!"
 }
 
-export const PortfolioQuotes = (): ReactElement => {
+export const Carousel = (): ReactElement => {
   const [currentActive, setCurrentActive] = useState(Entries.first);
   const active = {
     first: currentActive === Entries.first,
@@ -59,13 +59,13 @@ export const PortfolioQuotes = (): ReactElement => {
         <div className={`row ${classes.portfolio_quotes_navigation_wrapper}`}>
           <div className={`${classes.portfolio_quotes_navigation} col-12`}>
             <div className={classes.portfolio_quotes_navigation_option_wrapper}>
-              <span onClick={setActive(Entries.first)} className={`${classes.portfolio_quotes_navigation_option} ${classes.title} ${active.first && classes.active}`}>Lorum First</span>
+              <span onClick={setActive(Entries.first)} className={`${classes.portfolio_quotes_navigation_option} ${classes.title} ${active.first && classes.active}`}>Setup a wallet</span>
             </div>
             <div className={classes.portfolio_quotes_navigation_option_wrapper}>
-            <span onClick={setActive(Entries.second)} className={`${classes.portfolio_quotes_navigation_option} ${classes.title} ${active.second && classes.active}`}>Lorum Second</span>
+            <span onClick={setActive(Entries.second)} className={`${classes.portfolio_quotes_navigation_option} ${classes.title} ${active.second && classes.active}`}>Add your NFTs</span>
             </div>
             <div className={classes.portfolio_quotes_navigation_option_wrapper}>
-            <span onClick={setActive(Entries.third)} className={`${classes.portfolio_quotes_navigation_option} ${classes.title} ${active.third && classes.active}`}>Lorum Third</span>
+            <span onClick={setActive(Entries.third)} className={`${classes.portfolio_quotes_navigation_option} ${classes.title} ${active.third && classes.active}`}>Sell your NFTs</span>
             </div>
             <div className={`
               ${classes.border}
@@ -80,7 +80,7 @@ export const PortfolioQuotes = (): ReactElement => {
           <div className={`col-12 col-md-10 offset-lg-1 ${classes.quote_wrapper}`}>
             <span onClick={preStep} className={`${classes.arrow} ${classes.left}`}>&#60;</span>
             <span className={`${classes.quote}`}>
-              &quot;{quotes[currentActive]}&quot;
+             {carouselOptions[currentActive]}
             </span>
             <span onClick={nextStep} className={`${classes.arrow} ${classes.right}`}>&#62;</span>
           </div>
@@ -103,4 +103,4 @@ export const PortfolioQuotes = (): ReactElement => {
   )
 }
 
-if (process.env.NODE_ENV !== "production") PortfolioQuotes.displayName = "portfolio_quotes";
+if (process.env.NODE_ENV !== "production") Carousel.displayName = "carousel";

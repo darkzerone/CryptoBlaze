@@ -1,18 +1,18 @@
 import React from "react";
 import { IntroPage } from "../../components/intro-page/intro-page";
 import { ContactPage } from "../../components/contact/contact-page";
-import { PortfolioQuotes } from "../../components/portfolio-quotes/portfolio-quotes";
+import { Carousel } from "../../components/carousel/carousel";
 import { DisruptPage } from "../../components/disrupt/disrupt-page";
 import { ProjectPage } from "../../components/projects/project-page";
-import { HowWeWorkPage } from "../../components/how-we-work/how-we-work-page";
+import { WhyUsPage } from "../../components/how-we-work/why-us-page";
 
 export const Home = () => {
   
   return (
     <>
       <IntroPage/>
-      <PortfolioQuotes />
-      <HowWeWorkPage />
+      <Carousel />
+      <WhyUsPage />
       <ProjectPage />
       <DisruptPage />
       <ContactPage />
