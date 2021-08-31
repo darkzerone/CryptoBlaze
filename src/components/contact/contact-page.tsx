@@ -1,4 +1,4 @@
-import React, { ReactElement, useState } from "react";
+import React, { ReactElement } from "react";
 import classes from "./contact-page.module.scss";
 export const ContactPage = (): ReactElement => {
 
